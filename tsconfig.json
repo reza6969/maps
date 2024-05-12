@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["node", "faker"],
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "faker": ["node_modules/faker/index"]
+    }
+  }
+}
