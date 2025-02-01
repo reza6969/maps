@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "ES6",
+    "module": "ESNext", // or "commonjs"
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["node", "faker"],
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node", "googlemaps", "faker-js"],
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "faker": ["node_modules/faker/index"]
+      "googlemaps": ["@types/googlemaps"],
+      "faker-js": ["node_modules/faker-js/index"]
     }
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

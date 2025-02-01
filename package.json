@@ -1,9 +1,23 @@
 {
-  "devDependencies": {
-    "typescript": "^5.4.5"
+  "name": "maps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@types/faker": "^6.6.9",
-    "faker": "^6.6.6"
+    "@faker-js/faker": "^9.3.0",
+    "@types/google-maps": "^3.2.6",
+    "caniuse-lite": "^1.0.30001690"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "@types/googlemaps": "^3.43.3",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.1",
+    "typescript": "^5.7.2"
   }
 }

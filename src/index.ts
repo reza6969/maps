@@ -1,19 +1,33 @@
-import { User, red } from './User';
-import color from './User';
+import { User } from './User';
 import { Company } from './company';
+import { CustomMap } from "./CustomMap";
 
-console.log(color); // 'green'
-
-type UserConstructor = new (name: string, lat: number, lng: number) => User;
-const UserAlias: UserConstructor = User;
-
-// const user = new User();
-const user = new UserAlias('John', 123, 456);
+// Create instances of User and Company
+const user = new User();
 console.log(user);
 
-// const company = new Company();
-// console.log(company);
-type CompanyConstructor = new (CompanyName: string, catchPhrase: string, lat: number, lng: number) => Company;
-const CompanyAlias: CompanyConstructor = Company;
-const company = new CompanyAlias('Google', 'Google', 123, 456);
-console.log(company)
+const company = new Company();
+console.log(company);
+
+// Initialize the map
+new CustomMap('map');
+const customMap = new CustomMap('map');
+
+// customMap.googleMap
+customMap.addMarker(user);
+customMap.addMarker(company);
+
+// Define the map options
+const mapOptions: google.maps.MapOptions = {
+    center: { lat: 30, lng: -110 }, // Set the center of the map
+    zoom: 8, // Set the initial zoom level
+    mapTypeId: google.maps.MapTypeId.ROADMAP, // Set the map type
+};
+
+// Initialize the map
+function initMap(): void {
+    customMap.initialize(mapOptions);
+}
+
+// Call the initMap function when the window loads
+window.onload = initMap;
